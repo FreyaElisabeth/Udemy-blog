@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchPosts } from '../actions'
+import AuthorDetail from './AuthorDetail'
 
 class PostList extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class PostList extends React.Component {
             <div className="description">
               <h2>{post.title}</h2>
               <p>{post.body}</p>
+              <AuthorDetail userId={post.userId} />
             </div>
           </div>
         </div>
